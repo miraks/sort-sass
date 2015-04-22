@@ -1,0 +1,30 @@
+{
+  "name": "sort-sass",
+  "version": "0.1.0",
+  "description": "Sass properties sorting tool",
+  "main": "./lib/sort-sass.js",
+  "bin": {
+    "sortsass": "./bin/sortsass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miraks/sort-sass"
+  },
+  "keywords": [
+    "sass",
+    "sort"
+  ],
+  "author": "Alexey Volodkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miraks/sort-sass/issues"
+  },
+  "homepage": "https://github.com/miraks/sort-sass",
+  "preferGlobal": true,
+  "devDependencies": {
+    "coffee-script": "^1.9.2"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/coffee --no-header -bco lib src"
+  }
+}

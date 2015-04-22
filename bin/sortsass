@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var fs = require('fs');
+var sortSass = require(path.resolve(__dirname, '../lib/sort-sass'));
+
+var sass = fs.readFileSync(process.argv[2]).toString();
+fs.writeFileSync(process.argv[2], sortSass(sass));
