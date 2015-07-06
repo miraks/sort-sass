@@ -24,7 +24,7 @@ From node:
 var fs = require('fs');
 var sortSass = require('sort-sass');
 
-var sassString = fs.readFileSync('some.sass').toString();
+var sassString = fs.readFileSync('some.sass');
 var sortedSassString = sortSass(sassString);
 ```
 

@@ -69,6 +69,7 @@ sortChildren = (children) ->
     0
 
 sortSass = (sass) ->
+  sass = sass.toString()
   lines = splitOnLines sass
   roots = generateTrees lines
   sortTrees roots
