@@ -1,6 +1,6 @@
 {
   "name": "sort-sass",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Sass properties sorting tool",
   "main": "./lib/sort-sass.js",
   "bin": {
