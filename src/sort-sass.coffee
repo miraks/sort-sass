@@ -1,3 +1,4 @@
+_ = require 'lodash'
 Line = require './line'
 order = require './order'
 
@@ -49,7 +50,7 @@ sortTree = (root) ->
 
 generateLines = (roots, lines = []) ->
   roots.reduce (result, root) ->
-    result.push "#{' '.repeat(root.indent)}#{root.str}"
+    result.push "#{_.repeat ' ', root.indent}#{root.str}"
     generateLines root.children, result
     result
   , lines

@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/miraks/sort-sass",
   "preferGlobal": true,
+  "dependencies": {
+    "lodash": "^3.10.0"
+  },
   "devDependencies": {
     "coffee-script": "^1.9.2"
   },
