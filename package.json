@@ -25,9 +25,12 @@
     "lodash": "^3.10.0"
   },
   "devDependencies": {
-    "coffee-script": "^1.9.2"
+    "chai": "^3.0.0",
+    "coffee-script": "^1.9.2",
+    "mocha": "^2.2.5"
   },
   "scripts": {
-    "build": "./node_modules/.bin/coffee --no-header -bco lib src"
+    "build": "./node_modules/.bin/coffee --no-header -bco lib src",
+    "test": "./node_modules/.bin/mocha --compilers coffee:coffee-script/register"
   }
 }
