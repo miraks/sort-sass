@@ -3,9 +3,7 @@ Line = require './line'
 order = require './order'
 
 class Sorter
-  defaultOpts:
-    indentSize: 2
-    indentChar: ' '
+  defaultOpts: {}
 
   constructor: (sass, opts = {}) ->
     @sass = sass.toString()
@@ -36,7 +34,7 @@ class Sorter
     condition = if line.isUnimportant()
       -> parent.isSortable()
     else
-      -> parent.indent >= line.indent
+      -> parent.indent.length >= line.indent.length
     parent = parent.parent while parent? and condition()
     parent
 
@@ -65,7 +63,7 @@ class Sorter
 
   generateLines: (roots, lines = []) ->
     roots.reduce (result, root) =>
-      result.push "#{_.repeat ' ', root.indent}#{root.str}"
+      result.push root.toString()
       @generateLines root.children, result
       result
     , lines

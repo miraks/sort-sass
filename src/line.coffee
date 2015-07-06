@@ -30,7 +30,7 @@ class Line
   ]
 
   constructor: (@str) ->
-    @indent = /^\s*/.exec(@str)[0].length
+    @indent = /^\s*/.exec(@str)[0]
     @str = @str.trim()
     @type = @determineType()
     @children = []
@@ -67,5 +67,8 @@ class Line
       when /^(\.|#|\w|&|::|\*)/.test(@str) and not _.includes(@str, ': ') then 'selector'
       when /^([a-z\-]+):/.test @str then 'property'
       else 'something'
+
+  toString: ->
+    @indent + @str
 
 module.exports = Line

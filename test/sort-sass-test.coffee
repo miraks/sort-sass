@@ -19,3 +19,16 @@ describe '#sortSass', ->
           throw err if err?
           expect(sortSass(sass)).to.eq(expectedSass.toString())
           done()
+
+  it 'preserves indentation', ->
+    sass = '''
+      div
+          height: 10px
+          width: 10px
+    '''
+
+    expect(sortSass(sass)).to.eq '''
+      div
+          width: 10px
+          height: 10px
+    '''
