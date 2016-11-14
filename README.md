@@ -52,6 +52,14 @@ Output:
 	color: white
 ```
 
+## Properties order
+
+> Ordering is hardcoded right now, you can see it here https://github.com/miraks/sort-sass/blob/master/src/order.coffee. I think I'll add an option to change this.
+
+– [miraks](https://github.com/miraks) (repository owner) [in a comment](https://github.com/miraks/sort-sass/issues/1#issuecomment-238791283) to #1
+
+There is an issue [#3](https://github.com/miraks/sort-sass/issues/3)
+
 ## License
 
 MIT © [Alexey Volodkin](a@vldkn.net)
